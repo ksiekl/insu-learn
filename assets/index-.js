@@ -26006,7 +26006,7 @@ const App = () => {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-h-[100%] w-[100%] font-primary", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("header", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs(Routes, { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Intro, {}), index: true }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/insu-learn/", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Intro, {}), index: true }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "chapters", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Chapters, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "intro", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Intro$1, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "insulin", element: /* @__PURE__ */ jsxRuntimeExports.jsx(Insulin, {}) }),
