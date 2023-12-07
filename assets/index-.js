@@ -58,7 +58,6 @@ function _mergeNamespaces(n2, m2) {
     fetch(link.href, fetchOpts);
   }
 })();
-const output = "";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x2) {
   return x2 && x2.__esModule && Object.prototype.hasOwnProperty.call(x2, "default") ? x2["default"] : x2;
@@ -11395,14 +11394,14 @@ function loadableAllArray(inputs) {
 function loadableAll(inputs) {
   const unwrapedInputs = Array.isArray(inputs) ? inputs : Object.getOwnPropertyNames(inputs).map((key) => inputs[key]);
   const normalizedInputs = unwrapedInputs.map((x2) => isLoadable(x2) ? x2 : Recoil_isPromise(x2) ? loadableWithPromise(x2) : loadableWithValue(x2));
-  const output2 = loadableAllArray(normalizedInputs);
+  const output = loadableAllArray(normalizedInputs);
   return Array.isArray(inputs) ? (
     // $FlowIssue[incompatible-return]
-    output2
+    output
   ) : (
     // Object.getOwnPropertyNames() has consistent key ordering with ES6
     // $FlowIssue[incompatible-call]
-    output2.map((outputs) => Object.getOwnPropertyNames(inputs).reduce(
+    output.map((outputs) => Object.getOwnPropertyNames(inputs).reduce(
       // $FlowFixMe[invalid-computed-prop]
       (out, key, idx) => ({
         ...out,
@@ -16562,8 +16561,8 @@ function wrapResults(dependencies, results) {
   );
 }
 function wrapLoadables(dependencies, results, exceptions) {
-  const output2 = exceptions.map((exception, idx) => exception == null ? loadableWithValue$4(results[idx]) : Recoil_isPromise(exception) ? loadableWithPromise$3(exception) : loadableWithError$3(exception));
-  return wrapResults(dependencies, output2);
+  const output = exceptions.map((exception, idx) => exception == null ? loadableWithValue$4(results[idx]) : Recoil_isPromise(exception) ? loadableWithPromise$3(exception) : loadableWithError$3(exception));
+  return wrapResults(dependencies, output);
 }
 function combineAsyncResultsWithSyncResults(syncResults, asyncResults) {
   return asyncResults.map((result, idx) => (
